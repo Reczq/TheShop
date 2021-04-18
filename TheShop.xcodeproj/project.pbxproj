@@ -9,12 +9,12 @@
 /* Begin PBXBuildFile section */
 		2BC1DE9C262C73D900B525DC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC1DE9B262C73D900B525DC /* AppDelegate.swift */; };
 		2BC1DE9E262C73D900B525DC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC1DE9D262C73D900B525DC /* SceneDelegate.swift */; };
-		2BC1DEA0262C73D900B525DC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC1DE9F262C73D900B525DC /* ContentView.swift */; };
 		2BC1DEA2262C73DB00B525DC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2BC1DEA1262C73DB00B525DC /* Assets.xcassets */; };
 		2BC1DEA5262C73DB00B525DC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2BC1DEA4262C73DB00B525DC /* Preview Assets.xcassets */; };
 		2BC1DEA8262C73DB00B525DC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2BC1DEA6262C73DB00B525DC /* LaunchScreen.storyboard */; };
 		2BC1DEB3262C73DC00B525DC /* TheShopTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC1DEB2262C73DC00B525DC /* TheShopTests.swift */; };
 		2BC1DEBE262C73DC00B525DC /* TheShopUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC1DEBD262C73DC00B525DC /* TheShopUITests.swift */; };
+		2BC1DEDD262C747800B525DC /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC1DEDC262C747800B525DC /* HomeViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,7 +38,6 @@
 		2BC1DE98262C73D900B525DC /* TheShop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TheShop.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2BC1DE9B262C73D900B525DC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2BC1DE9D262C73D900B525DC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		2BC1DE9F262C73D900B525DC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		2BC1DEA1262C73DB00B525DC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2BC1DEA4262C73DB00B525DC /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		2BC1DEA7262C73DB00B525DC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,6 +48,7 @@
 		2BC1DEB9262C73DC00B525DC /* TheShopUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TheShopUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2BC1DEBD262C73DC00B525DC /* TheShopUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheShopUITests.swift; sourceTree = "<group>"; };
 		2BC1DEBF262C73DC00B525DC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2BC1DEDC262C747800B525DC /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,11 +101,8 @@
 			children = (
 				2BC1DE9B262C73D900B525DC /* AppDelegate.swift */,
 				2BC1DE9D262C73D900B525DC /* SceneDelegate.swift */,
-				2BC1DE9F262C73D900B525DC /* ContentView.swift */,
-				2BC1DEA1262C73DB00B525DC /* Assets.xcassets */,
-				2BC1DEA6262C73DB00B525DC /* LaunchScreen.storyboard */,
-				2BC1DEA9262C73DB00B525DC /* Info.plist */,
-				2BC1DEA3262C73DB00B525DC /* Preview Content */,
+				2BC1DECE262C73FD00B525DC /* Source */,
+				2BC1DECF262C740200B525DC /* Resources */,
 			);
 			path = TheShop;
 			sourceTree = "<group>";
@@ -134,6 +131,41 @@
 				2BC1DEBF262C73DC00B525DC /* Info.plist */,
 			);
 			path = TheShopUITests;
+			sourceTree = "<group>";
+		};
+		2BC1DECE262C73FD00B525DC /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				2BC1DEE4262C747B00B525DC /* Home */,
+				2BC1DEE5262C748000B525DC /* Details */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		2BC1DECF262C740200B525DC /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				2BC1DEA3262C73DB00B525DC /* Preview Content */,
+				2BC1DEA9262C73DB00B525DC /* Info.plist */,
+				2BC1DEA6262C73DB00B525DC /* LaunchScreen.storyboard */,
+				2BC1DEA1262C73DB00B525DC /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		2BC1DEE4262C747B00B525DC /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				2BC1DEDC262C747800B525DC /* HomeViewController.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		2BC1DEE5262C748000B525DC /* Details */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Details;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -268,7 +300,7 @@
 			files = (
 				2BC1DE9C262C73D900B525DC /* AppDelegate.swift in Sources */,
 				2BC1DE9E262C73D900B525DC /* SceneDelegate.swift in Sources */,
-				2BC1DEA0262C73D900B525DC /* ContentView.swift in Sources */,
+				2BC1DEDD262C747800B525DC /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -437,9 +469,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_ASSET_PATHS = "\"TheShop/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"TheShop/Resources/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = TheShop/Info.plist;
+				INFOPLIST_FILE = TheShop/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -457,9 +489,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_ASSET_PATHS = "\"TheShop/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"TheShop/Resources/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = TheShop/Info.plist;
+				INFOPLIST_FILE = TheShop/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
