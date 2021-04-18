@@ -137,7 +137,6 @@
 			isa = PBXGroup;
 			children = (
 				2BC1DEE4262C747B00B525DC /* Home */,
-				2BC1DEE5262C748000B525DC /* Details */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -159,13 +158,6 @@
 				2BC1DEDC262C747800B525DC /* HomeViewController.swift */,
 			);
 			path = Home;
-			sourceTree = "<group>";
-		};
-		2BC1DEE5262C748000B525DC /* Details */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Details;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

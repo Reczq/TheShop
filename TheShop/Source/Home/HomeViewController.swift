@@ -13,4 +13,8 @@ final class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
     }
+    
+    func test() {
+        
+    }
 }
