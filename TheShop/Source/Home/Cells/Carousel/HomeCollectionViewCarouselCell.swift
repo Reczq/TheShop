@@ -31,7 +31,7 @@ final class HomeCollectionViewCarouselCell: UICollectionViewCell {
         collectionView.backgroundColor = nil
         collectionView.showsVerticalScrollIndicator = false
         collectionView.showsHorizontalScrollIndicator = false
-        collectionView.register(HomeCollectionViewCarouselCell.self,
+        collectionView.register(CarouselCell.self,
                                 forCellWithReuseIdentifier: "CarouselCell")
         return collectionView
     }()

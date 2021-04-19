@@ -84,14 +84,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		2B9FAE6D262C9238005FEBAB /* Cell */ = {
+		2B152905262E1AFF00D964A3 /* Carousel */ = {
 			isa = PBXGroup;
 			children = (
-				2B9FAE6E262C924F005FEBAB /* HomeCollectionViewBannerCell.swift */,
 				2B9FAE76262C9B7B005FEBAB /* HomeCollectionViewCarouselCell.swift */,
 				A47FF700262E12DB00D30BB2 /* CarouselCell.swift */,
 			);
-			path = Cell;
+			path = Carousel;
+			sourceTree = "<group>";
+		};
+		2B152906262E1B0E00D964A3 /* Banner */ = {
+			isa = PBXGroup;
+			children = (
+				2B9FAE6E262C924F005FEBAB /* HomeCollectionViewBannerCell.swift */,
+			);
+			path = Banner;
+			sourceTree = "<group>";
+		};
+		2B9FAE6D262C9238005FEBAB /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				2B152906262E1B0E00D964A3 /* Banner */,
+				2B152905262E1AFF00D964A3 /* Carousel */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		2BC1DE8F262C73D900B525DC = {
@@ -174,8 +190,8 @@
 		2BC1DEE4262C747B00B525DC /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				2B9FAE6D262C9238005FEBAB /* Cell */,
 				2BC1DEDC262C747800B525DC /* HomeViewController.swift */,
+				2B9FAE6D262C9238005FEBAB /* Cells */,
 			);
 			path = Home;
 			sourceTree = "<group>";
