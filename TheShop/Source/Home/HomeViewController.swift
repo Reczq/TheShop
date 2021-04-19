@@ -17,7 +17,8 @@ final class HomeViewController: UIViewController {
             )
         ),
         .carousel,
-        .carousel,
+        .carousel
+      
     ]
     
     private lazy var homeFlowLayout: UICollectionViewFlowLayout = {

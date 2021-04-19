@@ -18,6 +18,7 @@
 		2BC1DEB3262C73DC00B525DC /* TheShopTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC1DEB2262C73DC00B525DC /* TheShopTests.swift */; };
 		2BC1DEBE262C73DC00B525DC /* TheShopUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC1DEBD262C73DC00B525DC /* TheShopUITests.swift */; };
 		2BC1DEDD262C747800B525DC /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC1DEDC262C747800B525DC /* HomeViewController.swift */; };
+		A47FF701262E12DB00D30BB2 /* CarouselCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A47FF700262E12DB00D30BB2 /* CarouselCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,7 @@
 		2BC1DEBD262C73DC00B525DC /* TheShopUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheShopUITests.swift; sourceTree = "<group>"; };
 		2BC1DEBF262C73DC00B525DC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2BC1DEDC262C747800B525DC /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		A47FF700262E12DB00D30BB2 /* CarouselCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +89,7 @@
 			children = (
 				2B9FAE6E262C924F005FEBAB /* HomeCollectionViewBannerCell.swift */,
 				2B9FAE76262C9B7B005FEBAB /* HomeCollectionViewCarouselCell.swift */,
+				A47FF700262E12DB00D30BB2 /* CarouselCell.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -310,6 +313,7 @@
 				2BC1DE9C262C73D900B525DC /* AppDelegate.swift in Sources */,
 				2BC1DE9E262C73D900B525DC /* SceneDelegate.swift in Sources */,
 				2B9FAE77262C9B7B005FEBAB /* HomeCollectionViewCarouselCell.swift in Sources */,
+				A47FF701262E12DB00D30BB2 /* CarouselCell.swift in Sources */,
 				2BC1DEDD262C747800B525DC /* HomeViewController.swift in Sources */,
 				2B9FAE6F262C924F005FEBAB /* HomeCollectionViewBannerCell.swift in Sources */,
 			);
