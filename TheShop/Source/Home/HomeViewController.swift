@@ -3,14 +3,14 @@ import UIKit
 final class HomeViewController: UIViewController {
 
     enum ItemType {
-        case banner(HomeCollectionViewBannerViewModelCellProtocol)
+        case banner(HomeCollectionViewBannerCellViewModelProtocol)
         case carousel
     }
 
     private let modules: [ItemType] = [
         .banner(
-            HomeCollectionViewBannerViewModelCell(
-                data: HomeCollectionViewBannerViewModelCell.Data(
+            HomeCollectionViewBannerCellViewModel(
+                data: HomeCollectionViewBannerCellViewModel.Data(
                     title: "testTitle-1",
                     image: UIImage(named: "testAvatar")
                 )
@@ -34,6 +34,7 @@ final class HomeViewController: UIViewController {
         collectionView.delegate = self
         collectionView.showsVerticalScrollIndicator = false
         collectionView.showsHorizontalScrollIndicator = false
+        collectionView.backgroundColor = .clear
         collectionView.register(HomeCollectionViewBannerCell.self,
                                 forCellWithReuseIdentifier: "HomeCollectionViewBannerCell")
         collectionView.register(HomeCollectionViewCarouselCell.self,
