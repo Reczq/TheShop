@@ -4,20 +4,24 @@ final class HomeViewController: UIViewController {
 
     enum ItemType {
         case banner(HomeCollectionViewBannerViewModelCellProtocol)
-        case carousel
+        case carousel([HomeCollectionViewCarouselViewModelCellProtocol])
     }
 
     private let modules: [ItemType] = [
-        .banner(
-            HomeCollectionViewBannerViewModelCell(
-                data: HomeCollectionViewBannerViewModelCell.Data(
-                    title: "testTitle-1",
-                    image: UIImage(named: "testAvatar")
-                )
-            )
+        .banner(HomeCollectionViewBannerViewModelCell(data: HomeCollectionViewBannerViewModelCell.Data(title: "testTitle-1",image: UIImage(named: "testAvatar")))),
+        
+        .carousel([HomeCollectionViewCarouselViewModelCell(data: HomeCollectionViewCarouselViewModelCell.Data(title: "1",image: UIImage(named: "testAvatar"))),
+                   HomeCollectionViewCarouselViewModelCell(data: HomeCollectionViewCarouselViewModelCell.Data(title: "2",image: UIImage(named: "testAvatar"))),
+                   HomeCollectionViewCarouselViewModelCell(data: HomeCollectionViewCarouselViewModelCell.Data(title: "3",image: UIImage(named: "testAvatar"))),
+                   HomeCollectionViewCarouselViewModelCell(data: HomeCollectionViewCarouselViewModelCell.Data(title: "4",image: UIImage(named: "testAvatar"))),
+                   HomeCollectionViewCarouselViewModelCell(data: HomeCollectionViewCarouselViewModelCell.Data(title: "5",image: UIImage(named: "testAvatar"))),
+                   HomeCollectionViewCarouselViewModelCell(data: HomeCollectionViewCarouselViewModelCell.Data(title: "6",image: UIImage(named: "testAvatar"))),
+                   HomeCollectionViewCarouselViewModelCell(data: HomeCollectionViewCarouselViewModelCell.Data(title: "7",image: UIImage(named: "testAvatar"))),
+                   HomeCollectionViewCarouselViewModelCell(data: HomeCollectionViewCarouselViewModelCell.Data(title: "8",image: UIImage(named: "testAvatar"))),
+                   HomeCollectionViewCarouselViewModelCell(data: HomeCollectionViewCarouselViewModelCell.Data(title: "9",image: UIImage(named: "testAvatar"))),
+                   HomeCollectionViewCarouselViewModelCell(data: HomeCollectionViewCarouselViewModelCell.Data(title: "10",image: UIImage(named: "testAvatar")))
+                ]
         ),
-        .carousel,
-        .carousel
     ]
     
     private lazy var homeFlowLayout: UICollectionViewFlowLayout = {
@@ -83,8 +87,9 @@ extension HomeViewController: UICollectionViewDataSource {
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: String(describing: HomeCollectionViewBannerCell.self), for: indexPath) as? HomeCollectionViewBannerCell else { return UICollectionViewCell() }
             cell.update(viewModel: viewModel)
             return cell
-        case .carousel:
+        case .carousel(let viewModel):
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: String(describing: HomeCollectionViewCarouselCell.self), for: indexPath) as? HomeCollectionViewCarouselCell else { return UICollectionViewCell() }
+            cell.model = viewModel
             return cell
         }
     }
