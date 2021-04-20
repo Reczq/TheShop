@@ -64,7 +64,7 @@ final class HomeCollectionViewBannerViewModelCell: HomeCollectionViewBannerViewM
         let title: String
         let image: UIImage?
     }
-    
+
     private let data: Data
     
     init(data: Data) {

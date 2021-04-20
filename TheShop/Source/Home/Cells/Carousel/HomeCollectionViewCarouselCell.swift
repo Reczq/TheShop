@@ -2,7 +2,7 @@ import UIKit
 
 final class HomeCollectionViewCarouselCell: UICollectionViewCell {
     
-    var model: [HomeCollectionViewCarouselViewModelCellProtocol] = []
+    private var viewModel: HomeCollectionViewCarouselViewModelCellProtocol?
     
     private lazy var carouselCollectionView: UICollectionView = {
             let collectionView: UICollectionView = UICollectionView(frame: .zero,
@@ -34,6 +34,10 @@ final class HomeCollectionViewCarouselCell: UICollectionViewCell {
     required init?(coder aDecoder: NSCoder) {
         fatalError("CustomCollectionViewCell doesn't support Interface Builder")
     }
+    
+    func update(viewModel: HomeCollectionViewCarouselViewModelCellProtocol) {
+        self.viewModel = viewModel
+    }
    
     private func setUpLayout() {
         contentView.backgroundColor = #colorLiteral(red: 0.501960814, green: 0.501960814, blue: 0.501960814, alpha: 1)
@@ -61,19 +65,22 @@ extension HomeCollectionViewCarouselCell: UICollectionViewDelegate {
 
 extension HomeCollectionViewCarouselCell: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        model.count
+        viewModel?.count ?? 0
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: String(describing: CarouselCell.self), for: indexPath) as? CarouselCell else { return UICollectionViewCell() }
-        cell.update(viewModel: model[indexPath.item])
+        guard let viewModel = viewModel else { return UICollectionViewCell() }
+        cell.update(title: viewModel.configureTitle(index: indexPath.item),
+                    image: viewModel.configureImage(index: indexPath.item))
         return cell
     }
 }
 
 protocol HomeCollectionViewCarouselViewModelCellProtocol {
-    func configureImage() -> UIImage
-    func configureTitle() -> String
+    func configureImage(index: Int) -> UIImage
+    func configureTitle(index: Int) -> String
+    var count: Int { get }
 }
 
 final class HomeCollectionViewCarouselViewModelCell: HomeCollectionViewCarouselViewModelCellProtocol {
@@ -83,17 +90,21 @@ final class HomeCollectionViewCarouselViewModelCell: HomeCollectionViewCarouselV
         let image: UIImage?
     }
     
-    private let data: Data
+    private let data: [Data]
     
-    init(data: Data) {
+    init(data: [Data]) {
         self.data = data
     }
     
-    func configureImage() -> UIImage {
-        data.image ?? UIImage()
+    var count: Int {
+        data.count
+    }
+    
+    func configureImage(index: Int) -> UIImage {
+        data[index].image ?? UIImage()
     }
 
-    func configureTitle() -> String {
-        data.title.uppercased()
+    func configureTitle(index: Int) -> String {
+        data[index].title.uppercased()
     }
 }

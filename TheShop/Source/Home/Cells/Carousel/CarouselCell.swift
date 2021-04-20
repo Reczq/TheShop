@@ -22,9 +22,10 @@ final class CarouselCell: UICollectionViewCell {
         return imageView
     }()
     
-    func update(viewModel: HomeCollectionViewCarouselViewModelCellProtocol) {
-        carouselCellTitle.text = viewModel.configureTitle()
-        carouselCellImage.image = viewModel.configureImage()
+    func update(title: String,
+                image: UIImage) {
+        carouselCellTitle.text = title
+        carouselCellImage.image = image
     }
     
     override init(frame: CGRect) {
